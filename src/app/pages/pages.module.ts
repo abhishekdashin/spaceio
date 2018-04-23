@@ -4,7 +4,8 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
-import { SpaceManagementComponent } from './view/space-management/space-management.component';
+import { AssetManagementComponent } from './asset-management/asset-management.component';
+import { AssetViewComponent } from './asset-management/asset-view/asset-view.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -18,7 +19,6 @@ const PAGES_COMPONENTS = [
   ],
   declarations: [
     ...PAGES_COMPONENTS,
-    SpaceManagementComponent,
   ],
 })
 export class PagesModule {

@@ -12,6 +12,44 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
+    title: 'Space Management',
+    icon: 'nb-tables',
+    children: [
+      {
+        title: 'Sites',
+        link: '/pages/space-management/site-view',
+      },
+      {
+        title: 'Site Map',
+        link: '/pages/space-management/site-map',
+      },
+      {
+        title: 'Spaces',
+        link: '/pages/space-management/space-management-view',
+      },
+    ],
+  },
+  {
+    title: 'Asset Management',
+    icon: 'nb-tables',
+    children: [
+      {
+        title: 'View Assets',
+        link: '/pages/asset-management/asset-view',
+      },
+    ],
+  },
+  {
+    title: 'Maintainence Management',
+    icon: 'nb-tables',
+    children: [
+      {
+        title: 'Smart Table',
+        link: '/pages/tables/smart-table',
+      },
+    ],
+  },
+  {
     title: 'UI Features',
     icon: 'nb-keypad',
     link: '/pages/ui-features',
@@ -160,36 +198,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Reset Password',
         link: '/auth/reset-password',
-      },
-    ],
-  },
-  {
-    title: 'Space Management',
-    icon: 'nb-tables',
-    children: [
-      {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
-      },
-    ],
-  },
-  {
-    title: 'Asset Management',
-    icon: 'nb-tables',
-    children: [
-      {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
-      },
-    ],
-  },
-  {
-    title: 'Maintainence Management',
-    icon: 'nb-tables',
-    children: [
-      {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
       },
     ],
   },
