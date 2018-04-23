@@ -8,7 +8,7 @@ describe('SpaceManagementViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SpaceManagementViewComponent ]
+      declarations: [ SpaceManagementViewComponent ],
     })
     .compileComponents();
   }));

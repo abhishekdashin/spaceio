@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'space-management-view',
+  selector: 'ngx-space-management-view',
   templateUrl: './space-management-view.component.html',
-  styleUrls: ['./space-management-view.component.scss']
+  styleUrls: ['./space-management-view.component.scss'],
 })
 export class SpaceManagementViewComponent implements OnInit {
 
