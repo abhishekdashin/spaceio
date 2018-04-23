@@ -12,7 +12,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'UI Features',
+    title: 'Space Management',
     icon: 'nb-keypad',
     link: '/pages/ui-features',
     children: [
