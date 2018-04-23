@@ -5,7 +5,7 @@ import { SpaceManagementViewService } from './space-management-view.service';
 describe('SpaceManagementViewService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SpaceManagementViewService]
+      providers: [SpaceManagementViewService],
     });
   });
 
