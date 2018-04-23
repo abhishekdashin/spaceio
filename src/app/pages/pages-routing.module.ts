@@ -29,12 +29,18 @@ const routes: Routes = [{
     path: 'forms',
     loadChildren: './forms/forms.module#FormsModule',
   }, {
-    path: 'tables',
-    loadChildren: './tables/tables.module#TablesModule',
-  }, {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
+  }, {
+    path: 'space-management',
+    loadChildren: './tables/tables.module#TablesModule',
+  }, {
+    path: 'asset-management',
+    loadChildren: './tables/tables.module#TablesModule',
+  }, {
+    path: 'maintainence-management',
+    loadChildren: './tables/tables.module#TablesModule',
   }],
 }];
 
