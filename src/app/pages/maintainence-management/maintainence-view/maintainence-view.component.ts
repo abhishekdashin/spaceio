@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { AssetViewService } from '../../../@core/data/asset-management/asset-view.service';
-
+import {MaintainenceManagementService} from '../../../@core/data/maintainence-management/maintainence-management.service';
 
 @Component({
-  selector: 'ngx-asset-view',
-  templateUrl: './asset-view.component.html',
-  styleUrls: ['./asset-view.component.scss'],
+  selector: 'ngx-maintainence-view',
+  templateUrl: './maintainence-view.component.html',
+  styleUrls: ['./maintainence-view.component.scss'],
 })
-export class AssetViewComponent {
+export class MaintainenceViewComponent {
 settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -30,33 +29,37 @@ settings = {
         title: 'Asset ID',
         type: 'number',
       },
-      assetType: {
-        title: 'Asset Type',
+      floorNo: {
+        title: 'Floor No',
+        type: 'number',
+      },
+      cause: {
+        title: 'Cause/Incident',
         type: 'string',
       },
       status: {
         title: 'Status',
         type: 'string',
       },
-      floorNo: {
-        title: 'Floor No',
-        type: 'number',
-      },
-      buildingNo: {
-        title: 'Building Number',
-        type: 'number',
-      },
-      buildingName: {
-        title: 'Building Name',
+      action: {
+        title: 'Action',
         type: 'string',
+      },
+      miscellaneous: {
+        title: 'Miscellaneous',
+        type: 'string',
+      },
+      sla: {
+        title: 'SLA',
+        type: 'number',
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private assetViewService: AssetViewService) {
-    const data = this.assetViewService.getAssets();
+  constructor(private maintainenceManagementService: MaintainenceManagementService) {
+    const data = this.maintainenceManagementService.getIncidents();
     this.source.load(data);
   }
 
@@ -67,6 +70,5 @@ settings = {
       event.confirm.reject();
     }
   }
-
 
 }
