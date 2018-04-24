@@ -1,23 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { CommonModule } from '@angular/common';
 import { ThemeModule } from '../../@theme/theme.module';
 
 
-import { SpaceManagementRoutingModule, routedComponents } from './space-management-routing.module';
+import { SpaceManagementRoutingModule } from './space-management-routing.module';
 import { SpaceManagementViewService } from '../../@core/data/space-management/space-management-view.service';
+import { SiteViewService } from '../../@core/data/space-management/site-view.service';
 
+import { SpaceManagementComponent } from './space-management.component';
+import { SpaceManagementViewComponent } from './space-management-view/space-management-view.component';
+import { SiteViewComponent } from './site-view/site-view.component';
+import { SiteMapComponent } from './site-map/site-map.component';
+import { RoomSelectorComponent } from './site-map/room-selector/room-selector.component';
+import { PlayerComponent } from './site-map/player/player.component';
 
 @NgModule({
   imports: [
-    CommonModule,
     ThemeModule,
     SpaceManagementRoutingModule,
     Ng2SmartTableModule,
   ],
   declarations: [
-    ...routedComponents,
+    SpaceManagementComponent, SpaceManagementViewComponent
+    , SiteViewComponent, SiteMapComponent, RoomSelectorComponent, PlayerComponent,
   ],
-  providers: [SpaceManagementViewService],
+  providers: [SpaceManagementViewService, SiteViewService],
 })
 export class SpaceManagementModule { }

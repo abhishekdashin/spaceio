@@ -29,7 +29,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         },
         legend: {
           left: 'left',
-          data: ['Line 1', 'Line 2', 'Line 3'],
+          data: ['Assigned', 'In Progress', 'Completed'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -37,7 +37,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            data: ['1w', '2w', '3w', '4w', '5w', '6w', '7w', '8w', '9w'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -81,19 +81,19 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         },
         series: [
           {
-            name: 'Line 1',
+            name: 'Assigned',
             type: 'line',
-            data: [1, 3, 9, 27, 81, 247, 741, 2223, 6669],
+            data: [1, 3, 9, 27, 81, 103, 132, 194, 200],
           },
           {
-            name: 'Line 2',
+            name: 'In Progress',
             type: 'line',
-            data: [1, 2, 4, 8, 16, 32, 64, 128, 256],
+            data: [1, 2, 4, 8, 16, 32, 64, 128, 197],
           },
           {
-            name: 'Line 3',
+            name: 'Completed',
             type: 'line',
-            data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
+            data: [1,1,3,7,12,19,23,100,132],
           },
         ],
       };

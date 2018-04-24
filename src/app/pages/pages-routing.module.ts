@@ -34,14 +34,18 @@ const routes: Routes = [{
     pathMatch: 'full',
   }, {
     path: 'space-management',
-    loadChildren: './tables/tables.module#TablesModule',
+    loadChildren: './space-management/space-management.module#SpaceManagementModule',
   }, {
     path: 'asset-management',
-    loadChildren: './tables/tables.module#TablesModule',
+    loadChildren: './asset-management/asset-management.module#AssetManagementModule',
   }, {
     path: 'maintainence-management',
     loadChildren: './tables/tables.module#TablesModule',
-  }],
+  },
+  {
+    path: 'workorder-management',
+    loadChildren: './workorder-management/workorder-management.module#WOManagementModule',
+  },],
 }];
 
 @NgModule({

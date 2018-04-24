@@ -1,20 +1,16 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { SpaceManagementViewService } from '../../../@core/data/space-management/space-management-view.service';
+import { WOViewService } from '../../../@core/data/workorder-management/view-wo.service';
+
 
 @Component({
-  selector: 'ngx-space-management-view',
-  templateUrl: './space-management-view.component.html',
-  styles: [`
-    nb-card {
-      transform: translate3d(0, 0, 0);
-    }
-  `],
+  selector: 'ngx-wo-view',
+  templateUrl: './view-wo.component.html',
+  styleUrls: ['./view-wo.component.scss'],
 })
-export class SpaceManagementViewComponent {
-
-   settings = {
+export class WOViewComponent {
+settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -30,28 +26,28 @@ export class SpaceManagementViewComponent {
       confirmDelete: true,
     },
     columns: {
-      roomId: {
-        title: 'Room ID',
+      siteId: {
+        title: 'WO ID',
         type: 'number',
       },
-      roomName: {
-        title: 'Room Name',
+      siteName: {
+        title: 'WO Type',
         type: 'string',
       },
-      roomType: {
-        title: 'Room Type',
+      siteCode: {
+        title: 'Status',
         type: 'string',
       },
-      buildingId: {
-        title: 'Building ID',
-        type: 'number',
-      },
-      buildingName: {
-        title: 'Building name',
+      city: {
+        title: 'Created By',
         type: 'string',
       },
-      location: {
-        title: 'Location',
+      state: {
+        title: 'Created Date',
+        type: 'string',
+      },
+      country: {
+        title: 'Country',
         type: 'string',
       },
     },
@@ -59,8 +55,8 @@ export class SpaceManagementViewComponent {
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private spaceManagementViewService: SpaceManagementViewService) {
-    const data = this.spaceManagementViewService.getSpaces();
+  constructor(private woViewService: WOViewService) {
+    const data = this.woViewService.getWO();
     this.source.load(data);
   }
 
@@ -71,5 +67,4 @@ export class SpaceManagementViewComponent {
       event.confirm.reject();
     }
   }
-
 }
