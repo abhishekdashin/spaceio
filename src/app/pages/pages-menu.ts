@@ -44,8 +44,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-tables',
     children: [
       {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
+        title: 'Manage',
+        link: '/pages/maintainence-management/maintainence-view',
       },
     ],
   },
