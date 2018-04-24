@@ -26,28 +26,28 @@ settings = {
       confirmDelete: true,
     },
     columns: {
-      siteId: {
+      workOrderId: {
         title: 'WO ID',
         type: 'number',
       },
-      siteName: {
+      woType: {
         title: 'WO Type',
         type: 'string',
       },
-      siteCode: {
+      status: {
         title: 'Status',
         type: 'string',
       },
-      city: {
+      createdBy: {
         title: 'Created By',
         type: 'string',
       },
-      state: {
-        title: 'Created Date',
+      assignedTo: {
+        title: 'Assigned To',
         type: 'string',
       },
-      country: {
-        title: 'Country',
+      priority: {
+        title: 'Priority',
         type: 'string',
       },
     },
@@ -56,7 +56,7 @@ settings = {
   source: LocalDataSource = new LocalDataSource();
 
   constructor(private woViewService: WOViewService) {
-    const data = this.woViewService.getWO();
+    const data = this.woViewService.getWorkOrders();
     this.source.load(data);
   }
 
