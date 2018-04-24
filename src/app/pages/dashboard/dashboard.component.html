@@ -6,14 +6,14 @@
   </div>
 
   <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Roller Shades" type="success">
+    <ngx-status-card title="Blinds" type="success">
       <i class="nb-roller-shades"></i>
     </ngx-status-card>
   </div>
 
   <div class="col-xxxl-3 col-md-6">
-    <ngx-status-card title="Wireless Audio" type="info">
-      <i class="nb-audio"></i>
+    <ngx-status-card title="AC" type="info">
+      <i class="ion-easel"></i>
     </ngx-status-card>
   </div>
 
@@ -25,6 +25,45 @@
 </div>
 
 <div class="row">
+     <div class="col-lg-6">
+        <nb-card>
+          <nb-card-header>Space Occupancy Chart</nb-card-header>
+          <nb-card-body>
+            <ngx-echarts-pie></ngx-echarts-pie>
+          </nb-card-body>
+        </nb-card>
+      </div>
+      <div class="col-lg-6">
+          <nb-card>
+            <nb-card-header>Asset Status</nb-card-header>
+            <nb-card-body>
+                <ngx-echarts-bar></ngx-echarts-bar>
+            </nb-card-body>
+          </nb-card>
+        </div>
+  </div>
+
+  <div class="row">
+      <div class="col-lg-6">
+          <nb-card>
+            <nb-card-header>Incidents</nb-card-header>
+            <nb-card-body>
+                <ngx-echarts-bar-animation></ngx-echarts-bar-animation>
+            </nb-card-body>
+          </nb-card>
+        </div>
+        <div class="col-lg-6">
+            <nb-card>
+              <nb-card-header>WorkOrders</nb-card-header>
+              <nb-card-body>
+                  <ngx-echarts-line></ngx-echarts-line>
+              </nb-card-body>
+            </nb-card>
+          </div>
+      
+    </div>
+
+<div class="row">
   <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
     <ngx-temperature></ngx-temperature>
   </div>
@@ -33,26 +72,26 @@
     <ngx-electricity></ngx-electricity>
   </div>
 </div>
-
+  
 <div class="row">
-  <div class="col-xxxl-9 col-xl-12">
+  <!-- <div class="col-xxxl-9 col-xl-12">
     <ngx-rooms></ngx-rooms>
   </div>
 
   <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
     <ngx-contacts></ngx-contacts>
-  </div>
+  </div> -->
 
-  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
+  <!-- <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
     <ngx-solar [chartValue]="72"></ngx-solar>
 
     <ngx-kitten></ngx-kitten>
-  </div>
+  </div> -->
 
-  <div class="col-xxxl-3 col-xxl-4 col-md-5">
+  <!-- <div class="col-xxxl-3 col-xxl-4 col-md-5">
     <ngx-traffic></ngx-traffic>
     <ngx-weather></ngx-weather>
-  </div>
+  </div> -->
 
   <div class="col-xxxl-6 col-xxl-12 col-md-7">
     <ngx-security-cameras></ngx-security-cameras>
