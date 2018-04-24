@@ -50,6 +50,21 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Workorder Management',
+    icon: 'nb-tables',
+    children: [
+      {
+        title: 'Create',
+        link: '/pages/workorder-management/create',
+      },
+      {
+        title: 'View',
+        link: '/pages/workorder-management/view',
+      },
+    ],
+  },
+
+  {
     title: 'UI Features',
     icon: 'nb-keypad',
     link: '/pages/ui-features',

@@ -20,6 +20,10 @@ import { SolarComponent } from './solar/solar.component';
 import { PlayerComponent } from './rooms/player/player.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
+import { EchartsPieComponent } from './charts/echarts-pie.component';
+import { EchartsBarComponent} from './charts/echarts-bar.component';
+import { EchartsBarAnimationComponent } from './charts/echarts-bar-animation.component';
+import { EchartsLineComponent } from './charts/echarts-line.component';
 
 
 @NgModule({
@@ -40,10 +44,14 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     SecurityCamerasComponent,
     ElectricityComponent,
     ElectricityChartComponent,
+    EchartsPieComponent,
+    EchartsBarComponent,
     WeatherComponent,
     PlayerComponent,
     SolarComponent,
     TrafficComponent,
+    EchartsBarAnimationComponent,
+    EchartsLineComponent,
     TrafficChartComponent,
   ],
 })
