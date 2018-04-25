@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-room-selector',
@@ -7,6 +8,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class RoomSelectorComponent {
   @Output() select: EventEmitter<number> = new EventEmitter();
+
+
+  showSiteMapDashboard(){
+    this.router.navigate(['/pages/space-management/site-map-dashboard'])
+  }
 
   selectedRoom: null;
   sortedRooms = [];
@@ -58,7 +64,7 @@ export class RoomSelectorComponent {
     ],
   };
 
-  constructor() {
+  constructor(private router: Router) {
     this.selectRoom('2');
   }
 
