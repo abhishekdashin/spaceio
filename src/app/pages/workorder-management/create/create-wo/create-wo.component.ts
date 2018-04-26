@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WOViewService } from '../../../../@core/data/workorder-management/view-wo.service';
 import { WorkOrder } from '../../../../@core/data/models/workorder';
 import { ToasterService, ToasterConfig, Toast, BodyOutputType } from 'angular2-toaster';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'ngx-create-wo',
@@ -21,6 +22,10 @@ export class CreateWoComponent implements OnInit {
   constructor(private woViewService: WOViewService, private toasterService: ToasterService) { }
 
   ngOnInit() {
+    this.setForm();
+  }
+
+  setForm() {
      this.workOrderType = ['User_Incident', 'CIP_Incident', 'Scheduled Maintainence', 'Warranty Fix'];
      this.createdBy = ['Abhishek', 'Nishitha'];
      this.assignedTo = ['Nishitha', 'Abhishek'];
@@ -37,14 +42,13 @@ export class CreateWoComponent implements OnInit {
       status: this.status[0],
       priority: this.priority[0],
   });
+  }
 
-}
+  getDate(date: any) {
+    return  date['day'] + '/' + date['month'] + '/' + date['year'];
+  }
 
-getDate(date: any) {
-  return  date['day'] + '/' + date['month'] + '/' + date['year'];
-}
-
-  createWorkOrder() {
+  createWorkOrder(workOrderForm: NgForm) {
     this.workOrder.createdDate = this.getDate(this.workOrder.createdDate);
     this.workOrder.assignedDate = this.getDate(this.workOrder.assignedDate);
     this.woViewService.workOrders.push(this.workOrder);
@@ -66,6 +70,7 @@ getDate(date: any) {
       bodyOutputType: BodyOutputType.TrustedHtml,
     };
     this.toasterService.popAsync(toast);
+    this.setForm();
   }
 
 }

@@ -6,14 +6,14 @@
       <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">Title</label>
-          <input type="text" [(ngModel)]="workOrder.workOrderTitle" class="form-control" name="workOrderTitle" id="inputFirstName" placeholder="Title">
+          <label for="workOrderTitle">Title</label>
+          <input type="text" [(ngModel)]="workOrder.workOrderTitle" class="form-control" name="workOrderTitle" id="workOrderTitle" placeholder="Title">
         </div>
       </div>
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">WorkOrder Type</label>
-          <select ng-model="workOrder.workOrderType" name="workOrderType" class="form-control" id="typeSelect1">
+          <label for="workOrderType">WorkOrder Type</label>
+          <select ng-model="workOrder.workOrderType" name="workOrderType" class="form-control" id="workOrderType">
             <option *ngFor = "let type of workOrderType"
                        [value] = "type"> {{type}} 
             </option>
@@ -24,8 +24,8 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">Created By</label>
-          <select [(ngModel)]="workOrder.createdBy" name="createdBy" class="form-control" id="typeSelect1">
+          <label for="createdBy">Created By</label>
+          <select [(ngModel)]="workOrder.createdBy" name="createdBy" class="form-control" id="createdBy">
             <option *ngFor = "let user of createdBy"
                        [value] = "user"> {{user}} 
             </option>
@@ -49,10 +49,10 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">Assigned To</label>
-           <select ng-model="workOrder.assignedTo" name="assignedTo" class="form-control" id="typeSelect1">
-            <option *ngFor = "let user of assignedTo"
-                       [value] = "user"> {{user}} 
+          <label for="assignedTo">Assigned To</label>
+           <select ng-model="workOrder.assignedTo" name="assignedTo" class="form-control" id="assignedTo">
+            <option *ngFor = "let assignedUser of assignedTo"
+                       [value] = "assignedUser"> {{assignedUser}}
             </option>
           </select>
         </div>
@@ -74,8 +74,8 @@
     <div class="row">
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">Status</label>
-          <select [(ngModel)]="workOrder.status" name="status" class="form-control" id="typeSelect1">
+          <label for="status">Status</label>
+          <select [(ngModel)]="workOrder.status" name="status" class="form-control" id="status">
             <option *ngFor = "let s of status"
                        [value] = "s"> {{s}} 
             </option>
@@ -84,8 +84,8 @@
       </div>
       <div class="col-sm-6">
         <div class="form-group">
-          <label for="inputFirstName">Priority</label>
-          <select [(ngModel)]="workOrder.priority" name="priority" class="form-control" id="typeSelect1">
+          <label for="priority">Priority</label>
+          <select [(ngModel)]="workOrder.priority" name="priority" class="form-control" id="priority">
             <option *ngFor = "let p of priority"
                        [value] = "p"> {{p}} 
             </option>
@@ -95,13 +95,13 @@
     </div>
     <div class="row">
       <div class="col-sm">
-        <ngx-editor-tiny-mce></ngx-editor-tiny-mce>
+        <ngx-editor-tiny-mce #editor></ngx-editor-tiny-mce>
       </div>
     </div>
     <br>
     <div class="form-group row">
         <div class="offset-sm-10 col-sm-2">
-          <button type="submit" class="btn btn-primary" (click)="createWorkOrder()">Submit</button>
+          <button type="submit" class="btn btn-primary" (click)="createWorkOrder(workOrderForm, editor)">Submit</button>
         </div>
     </div>
     </form>  
