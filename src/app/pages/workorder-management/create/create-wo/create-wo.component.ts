@@ -27,7 +27,7 @@ export class CreateWoComponent implements OnInit {
      this.status = ['NEW', 'PENDING', 'IN_PROGRESS', 'COMPLETED'];
      this.priority = ['MINOR', 'MAJOR', 'CRITICAL', 'SHOWSTOPPER'];
      this.workOrder = new WorkOrder({
-      workOrderId: 14,
+      workOrderId: this.woViewService.workOrders.length + 1,
       workOrderTitle: '',
       workOrderType: this.workOrderType[0],
       createdBy: this.createdBy[0],
