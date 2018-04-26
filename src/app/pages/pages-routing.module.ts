@@ -40,7 +40,7 @@ const routes: Routes = [{
     loadChildren: './asset-management/asset-management.module#AssetManagementModule',
   }, {
     path: 'maintainence-management',
-    loadChildren: './maintainence-management/maintainence-management.module#MaintainenceManagementModule',  
+    loadChildren: './maintainence-management/maintainence-management.module#MaintainenceManagementModule',
   },
   {
     path: 'workorder-management',
