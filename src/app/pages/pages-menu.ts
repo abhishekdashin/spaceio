@@ -40,7 +40,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Maintainence Management',
+    title: 'Incident Management',
     icon: 'nb-tables',
     children: [
       {
