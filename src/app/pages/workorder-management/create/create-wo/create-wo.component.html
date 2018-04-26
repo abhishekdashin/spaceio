@@ -1,0 +1,109 @@
+<toaster-container [toasterconfig]="config"></toaster-container>
+<nb-card>
+  <nb-card-header>Create WorkOrder</nb-card-header>
+  <nb-card-body>
+    <form  #workOrderForm="ngForm">
+      <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="workOrderTitle">Title</label>
+          <input type="text" [(ngModel)]="workOrder.workOrderTitle" class="form-control" name="workOrderTitle" id="workOrderTitle" placeholder="Title">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="workOrderType">WorkOrder Type</label>
+          <select ng-model="workOrder.workOrderType" name="workOrderType" class="form-control" id="workOrderType">
+            <option *ngFor = "let type of workOrderType"
+                       [value] = "type"> {{type}} 
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="createdBy">Created By</label>
+          <select [(ngModel)]="workOrder.createdBy" name="createdBy" class="form-control" id="createdBy">
+            <option *ngFor = "let user of createdBy"
+                       [value] = "user"> {{user}} 
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Created Date</label>
+          <div class="input-group">
+            <input class="form-control" [(ngModel)]="workOrder.createdDate" placeholder="yyyy-mm-dd" name="createdDate" ngbDatepicker #dCreated="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="dCreated.toggle()" type="button">
+                <i class="fa fa-calendar"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="assignedTo">Assigned To</label>
+           <select ng-model="workOrder.assignedTo" name="assignedTo" class="form-control" id="assignedTo">
+            <option *ngFor = "let assignedUser of assignedTo"
+                       [value] = "assignedUser"> {{assignedUser}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputWebsite">Assigned Date</label>
+          <div class="input-group">
+            <input class="form-control" [(ngModel)]="workOrder.assignedDate" placeholder="yyyy-mm-dd" name="assignedDate" ngbDatepicker #dAssigned="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="dAssigned.toggle()" type="button">
+                <i class="fa fa-calendar"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select [(ngModel)]="workOrder.status" name="status" class="form-control" id="status">
+            <option *ngFor = "let s of status"
+                       [value] = "s"> {{s}} 
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select [(ngModel)]="workOrder.priority" name="priority" class="form-control" id="priority">
+            <option *ngFor = "let p of priority"
+                       [value] = "p"> {{p}} 
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <ngx-editor-tiny-mce #editor></ngx-editor-tiny-mce>
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <div class="offset-sm-10 col-sm-2">
+          <button type="submit" class="btn btn-primary" (click)="createWorkOrder(workOrderForm, editor)">Submit</button>
+        </div>
+    </div>
+    </form>  
+  </nb-card-body>
+</nb-card>

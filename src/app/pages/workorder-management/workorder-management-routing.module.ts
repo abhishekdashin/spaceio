@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WOViewComponent } from './view/view-wo.component';
 import { WOManagementComponent } from './workorder-management.component';
+import { CreateWoComponent } from './create/create-wo/create-wo.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,6 +11,9 @@ const routes: Routes = [{
   children: [{
     path: 'view',
     component: WOViewComponent,
+  }, {
+    path: 'create',
+    component: CreateWoComponent,
   }],
 }];
 

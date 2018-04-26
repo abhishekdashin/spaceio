@@ -21,6 +21,11 @@ settings = {
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
     },
+    view: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
@@ -30,20 +35,32 @@ settings = {
         title: 'WO ID',
         type: 'number',
       },
-      woType: {
-        title: 'WO Type',
+      workOrderTitle: {
+        title: 'Title',
         type: 'string',
       },
-      status: {
-        title: 'Status',
+      workOrderType: {
+        title: 'WO Type',
         type: 'string',
       },
       createdBy: {
         title: 'Created By',
         type: 'string',
       },
+      createdDate: {
+        title: 'Created Date',
+        type: 'string',
+      },
       assignedTo: {
         title: 'Assigned To',
+        type: 'string',
+      },
+      assignedDate: {
+        title: 'Assigned Date',
+        type: 'string',
+      },
+      status: {
+        title: 'Status',
         type: 'string',
       },
       priority: {
