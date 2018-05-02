@@ -25,6 +25,8 @@ import { EchartsBarComponent} from './charts/echarts-bar.component';
 import { EchartsBarAnimationComponent } from './charts/echarts-bar-animation.component';
 import { EchartsLineComponent } from './charts/echarts-line.component';
 
+import { DataService } from '../../data.service';
+
 
 @NgModule({
   imports: [
@@ -54,5 +56,6 @@ import { EchartsLineComponent } from './charts/echarts-line.component';
     EchartsLineComponent,
     TrafficChartComponent,
   ],
+  providers: [DataService],
 })
 export class DashboardModule { }
