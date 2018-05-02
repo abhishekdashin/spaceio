@@ -21,7 +21,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Site Map',
-        link: '/pages/space-management/site-map',
+        link: '/pages/space-management/site-map-dashboard',
       },
       {
         title: 'Spaces',
@@ -40,7 +40,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Maintainence Management',
+    title: 'Incident Management',
     icon: 'nb-tables',
     children: [
       {
