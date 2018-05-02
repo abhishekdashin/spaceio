@@ -9,10 +9,10 @@ export class DataService {
 
   constructor(private _http: Http) { }
 
-  // getUsers() {
-  //   return this._http.get('/api/users')
-  //     .map(result => this.result = result.json().data);
-  // }
+  getHueData() {
+    return this._http.get('/api/hue')
+      .map(result => this.result = result.json().data);
+  }
 
 
 }
