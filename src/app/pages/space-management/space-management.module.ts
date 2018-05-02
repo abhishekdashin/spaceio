@@ -13,6 +13,9 @@ import { SiteViewComponent } from './site-view/site-view.component';
 import { SiteMapComponent } from './site-map/site-map.component';
 import { RoomSelectorComponent } from './site-map/room-selector/room-selector.component';
 import { PlayerComponent } from './site-map/player/player.component';
+import { SiteMapDashboardComponent } from './site-map.dashboard/site-map.dashboard.component';
+import { StatusCardComponent } from './site-map.dashboard/status-card/status-card.component';
+
 
 @NgModule({
   imports: [
@@ -22,7 +25,7 @@ import { PlayerComponent } from './site-map/player/player.component';
   ],
   declarations: [
     SpaceManagementComponent, SpaceManagementViewComponent
-    , SiteViewComponent, SiteMapComponent, RoomSelectorComponent, PlayerComponent,
+    , SiteViewComponent, SiteMapComponent, RoomSelectorComponent, PlayerComponent,SiteMapDashboardComponent,StatusCardComponent
   ],
   providers: [SpaceManagementViewService, SiteViewService],
 })
