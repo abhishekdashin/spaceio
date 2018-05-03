@@ -26,6 +26,7 @@ import { EchartsBarAnimationComponent } from './charts/echarts-bar-animation.com
 import { EchartsLineComponent } from './charts/echarts-line.component';
 
 import { DataService } from '../../data.service';
+import { AcStatusCardComponent } from './ac-status-card/ac-status-card.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { DataService } from '../../data.service';
     EchartsBarAnimationComponent,
     EchartsLineComponent,
     TrafficChartComponent,
+    AcStatusCardComponent,
   ],
   providers: [DataService],
 })

@@ -27,7 +27,7 @@ export class StatusCardComponent {
 
   constructor(private dataService: DataService) {}
 
-  getHueData() {
+  getHueData(on: boolean) {
     this.dataService.getHueData(!this.on).subscribe(
       data => {
         this.on = this.on ? false : true;

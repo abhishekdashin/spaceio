@@ -15,5 +15,21 @@ export class DataService {
       .pipe();
   }
 
+  getTemperature() {
+    return this._http.get('/api/temperature').pipe();
+  }
+
+  getHumidity() {
+    return this._http.get('/api/humidity').pipe();
+  }
+
+  getACMode() {
+    return this._http.get('/api/ac').pipe();
+  }
+
+  setTemperature(temperature: number) {
+    return this._http.get('/api/actemp/' + temperature).pipe();
+  }
+
 
 }

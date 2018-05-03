@@ -38,6 +38,10 @@ settings = {
         title: 'Status',
         type: 'string',
       },
+      state: {
+        title: 'State',
+        type: 'string',
+      },
       floorNo: {
         title: 'Floor No',
         type: 'number',
@@ -48,6 +52,10 @@ settings = {
       },
       buildingName: {
         title: 'Building Name',
+        type: 'string',
+      },
+      integrator: {
+        title: 'Integrator',
         type: 'string',
       },
     },
