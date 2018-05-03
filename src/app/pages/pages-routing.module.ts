@@ -41,7 +41,7 @@ const routes: Routes = [{
   }, {
     path: 'workorder-management',
     loadChildren: './workorder-management/workorder-management.module#WOManagementModule',
-  },{
+  }, {
     path: 'maintainence-management',
     loadChildren: './maintainence-management/maintainence-management.module#MaintainenceManagementModule',
   }],
