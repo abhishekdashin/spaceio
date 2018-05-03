@@ -10,8 +10,8 @@ export class RoomSelectorComponent {
   @Output() select: EventEmitter<number> = new EventEmitter();
 
 
-  showSiteMapDashboard(){
-    this.router.navigate(['/pages/space-management/site-map-dashboard'])
+  viewAssets(){
+    this.router.navigate(['/pages/asset-management/asset-view'])
   }
 
   selectedRoom: null;
