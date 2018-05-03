@@ -25,11 +25,9 @@ export class StatusCardComponent {
   @Input() type: string;
   @Input() on = true;
 
-  constructor(private router: Router){
-    
-  }
+  constructor(private router: Router) {}
   showSiteMap() {
     this.on = !this.on;
-    this.router.navigate(['/pages/space-management/site-map']);  
+    this.router.navigate(['/pages/space-management/site-map']);
   }
 }

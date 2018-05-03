@@ -43,6 +43,10 @@ settings = {
         title: 'WO Type',
         type: 'string',
       },
+       assetId: {
+        title: 'Asset ID',
+        type: 'string',
+      },
       createdBy: {
         title: 'Created By',
         type: 'string',

@@ -30,29 +30,25 @@ export class SpaceManagementViewComponent {
       confirmDelete: true,
     },
     columns: {
-      roomId: {
-        title: 'Room ID',
+      spaceId: {
+        title: 'Space ID',
         type: 'number',
       },
-      roomName: {
-        title: 'Room Name',
+      spaceName: {
+        title: 'Space Name',
         type: 'string',
       },
-      roomType: {
-        title: 'Room Type',
+      spaceType: {
+        title: 'Space Type',
         type: 'string',
       },
-      buildingId: {
-        title: 'Building ID',
+      siteCode: {
+        title: 'Site Code',
+        type: 'string',
+      },
+      floorNo: {
+        title: 'Floor No',
         type: 'number',
-      },
-      buildingName: {
-        title: 'Building name',
-        type: 'string',
-      },
-      location: {
-        title: 'Location',
-        type: 'string',
       },
     },
   };

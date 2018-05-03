@@ -18,7 +18,7 @@ settings = {
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
+      cancelButtonContent: '< class="nb-close"></i>',
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -27,11 +27,7 @@ settings = {
     columns: {
       assetId: {
         title: 'Asset ID',
-        type: 'number',
-      },
-      floorNo: {
-        title: 'Floor No',
-        type: 'number',
+        type: 'string',
       },
       cause: {
         title: 'Cause/Incident',

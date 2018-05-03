@@ -35,6 +35,7 @@ export class CreateWoComponent implements OnInit {
       workOrderId: this.woViewService.workOrders.length + 1,
       workOrderTitle: '',
       workOrderType: this.workOrderType[0],
+      assetId: '',
       createdBy: this.createdBy[0],
       createdDate: '',
       assignedTo: this.assignedTo[0],

@@ -28,7 +28,7 @@ settings = {
     columns: {
       assetId: {
         title: 'Asset ID',
-        type: 'number',
+        type: 'string',
       },
       assetType: {
         title: 'Asset Type',
@@ -42,16 +42,8 @@ settings = {
         title: 'State',
         type: 'string',
       },
-      floorNo: {
-        title: 'Floor No',
-        type: 'number',
-      },
-      buildingNo: {
-        title: 'Building Number',
-        type: 'number',
-      },
-      buildingName: {
-        title: 'Building Name',
+      spaceName: {
+        title: 'Space Name',
         type: 'string',
       },
       integrator: {
